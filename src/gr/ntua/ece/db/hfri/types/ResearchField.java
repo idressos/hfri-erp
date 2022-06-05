@@ -1,0 +1,21 @@
+package gr.ntua.ece.db.hfri.types;
+
+public class ResearchField {
+	
+	private int id;
+	private String description;
+	
+	public ResearchField(int id, String description) {
+		this.id = id;
+		this.description = description;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+}
