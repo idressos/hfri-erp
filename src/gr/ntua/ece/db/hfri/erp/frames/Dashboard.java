@@ -434,10 +434,10 @@ public class Dashboard extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this,
 					"<html>" +
 							"<h3>SSH Tunnel</h3>" +
-							"Status: " + (sshTunnel ? "<span style=\"color: green\">Connected</span>" : "Not Connected") + "<br>" +
+							"Status: " + (sshTunnel ? "<span style=\"color: #639435\">Connected</span>" : "Not Connected") + "<br>" +
 							"Address: " + (sshTunnel ? Database.getSshTunnel().getHost() + ":" + Database.getSshTunnel().getPort() : "-") + "<br>" +
 							"<h3>Database</h3>" +
-							"Status: " + (dbConnValid ? "<span style=\"color: green\">Connected</span>" : "<span style=\"color: maroon\">Disconnected</span>") + "<br>" +
+							"Status: " + (dbConnValid ? "<span style=\"color: #639435\">Connected</span>" : "<span style=\"color: #D82423\">Disconnected</span>") + "<br>" +
 					"</html>",
 					"Connection Status", JOptionPane.INFORMATION_MESSAGE);
 		} else if(command[0].equals("Disconnect")) {
