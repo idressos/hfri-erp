@@ -69,11 +69,15 @@ public class SSHTunnel {
 	public boolean knownHostsContains(HostKey hostKey) {
 		try {
 			String knownHosts = Files.readString(Paths.get(knownHostsFile), StandardCharsets.UTF_8);
-			String hostKeyRegex = (hostKey.getHost() + " +" + hostKey.getType() + " +" + hostKey.getKey())
-					 			.replaceAll("\\/", "\\\\\\/")
-					 			.replaceAll("\\[", "\\\\\\[")
-					 			.replaceAll("\\]", "\\\\\\]")
-					 			.replaceAll("\\.", "\\\\\\.");
+			String hostKeyRegex = hostKey.getHost()
+									.replaceAll("\\[", "\\\\[")
+									.replaceAll("\\]", "\\\\]")
+									.replaceAll("\\.", "\\\\.")
+								+ " +"
+								+ hostKey.getType()
+								+ " +"
+								+ hostKey.getKey().replaceAll("\\+", "\\\\+")
+								+ "\\R*";
 			
 			return knownHosts.matches(hostKeyRegex);
 		} catch(IOException | InvalidPathException ex) {
