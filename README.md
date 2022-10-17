@@ -1,6 +1,6 @@
 # HFRI-ERP
 Semester project for the Relational Databases course.  
-For details please read the [report](./report.pdf) (currently only available in Greek).
+For details please read the report: Available in [English](./report_en.pdf), [Greek](./report_el.pdf)
 
 School of Electrical and Computer Engineering, National Technical University of Athens  
-May 2022
+Spring Semester 2021-2022
